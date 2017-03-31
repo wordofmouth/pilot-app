@@ -1,1 +1,1 @@
-# pilot-app
+# Word of Mouth pilot app
