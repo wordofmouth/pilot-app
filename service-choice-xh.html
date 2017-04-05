@@ -6,6 +6,8 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+  <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+
   <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -13,7 +15,7 @@
 
 <html>
 <head>
-  <title>Word of Mouth - Service choice</title>
+  <title>Word of Mouth</title>
 </head>
 <body>
 
@@ -26,12 +28,12 @@
   </section>
 
   <section class="choices row">
-    <div class="choice col-xs-6 col-sm-4 col-lg-2"><a href="job-details.html"><img src="img/painter.png"></div></a>
-    <div class="choice col-xs-6 col-sm-4 col-lg-2"><a href="job-details.html"><img src="img/plumber.png"></div></a>
-    <div class="choice col-xs-6 col-sm-4 col-lg-2"><a href="job-details.html"><img src="img/tiler.png"></div></a>
-    <div class="choice col-xs-6 col-sm-4 col-lg-2"><a href="job-details.html"><img src="img/locksmith.png"></div></a>
-    <div class="choice col-xs-6 col-sm-4 col-lg-2"><a href="job-details.html"><img src="img/carpenter.png"></div></a>
-    <div class="choice col-xs-6 col-sm-4 col-lg-2"><a href="job-details.html"><img src="img/electrician.png"></div></a>
+    <div class="choice col-xs-6 col-sm-4 col-lg-2"><a class="btn-choice" id="painter" href="job-details-xh.html"><img src="img/painter.png"></div></a>
+    <div class="choice col-xs-6 col-sm-4 col-lg-2"><a class="btn-choice" id="plumber" href="job-details-xh.html"><img src="img/plumber.png"></div></a>
+    <div class="choice col-xs-6 col-sm-4 col-lg-2"><a class="btn-choice" id="tiler" href="job-details-xh.html"><img src="img/tiler.png"></div></a>
+    <div class="choice col-xs-6 col-sm-4 col-lg-2"><a class="btn-choice" id="locksmith" href="job-details-xh.html"><img src="img/locksmith.png"></div></a>
+    <div class="choice col-xs-6 col-sm-4 col-lg-2"><a class="btn-choice" id="carpenter" href="job-details-xh.html"><img src="img/carpenter.png"></div></a>
+    <div class="choice col-xs-6 col-sm-4 col-lg-2"><a class="btn-choice" id="electrician" href="job-details-xh.html"><img src="img/electrician.png"></div></a>
   </section>
 
 </div>
@@ -43,7 +45,11 @@
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-96879478-1', 'auto');
-  ga('send', 'pageview');
+  ga('send', 'pageview', 'service-choice');
+
+  $(".btn-choice").on('click', function() {
+      ga('send', 'event', 'choice', $(this).attr("id"), '3');
+  });
 </script>
 
 </body>

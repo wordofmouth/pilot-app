@@ -34,13 +34,13 @@
   <section class="home-menu">
     <div class="row">
       <div class="col-xs-4 col-md-2 col-md-offset-3">
-        <a id="enter-xhosa" class="btn-language" href="service-choice.html"><img class="center-block" src="img/enter-xhosa.png"></a>
+        <a id="xhosa" class="btn-language" href="service-choice-xh.html"><img class="center-block" src="img/enter-xhosa.png"></a>
       </div>
       <div class="col-xs-4 col-md-2">
-        <a id="enter-english" class="btn-language" href="service-choice.html"><img class="center-block" src="img/enter-english.png"></a>
+        <a id="english" class="btn-language" href="service-choice-en.html"><img class="center-block" src="img/enter-english.png"></a>
       </div>
       <div class="col-xs-4 col-md-2">
-        <a id="enter-afrikaans" class="btn-language" href="service-choice.html"><img class="center-block" src="img/enter-afrikaans.png"></a>
+        <a id="afrikaans" class="btn-language" href="service-choice-af.html"><img class="center-block" src="img/enter-afrikaans.png"></a>
       </div>
     </div>
   </section>
@@ -53,18 +53,10 @@
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-96879478-1', 'auto');
-  ga('send', 'pageview');
+  ga('send', 'pageview', 'homepage');
 
-  $("#enter-afrikaans").on('click', function() {
-      ga('send', 'event', 'language', 'afrikaans', '2');
-  });
-
-  $("#enter-english").on('click', function() {
-      ga('send', 'event', 'language', 'english', '2');
-  });
-
-  $("#enter-xhosa").on('click', function() {
-      ga('send', 'event', 'language', 'xhosa', '2');
+  $(".btn-language").on('click', function() {
+    ga('send', 'event', 'language', $(this).attr("id"), '2');
   });
 </script>
 

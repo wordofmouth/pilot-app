@@ -10,6 +10,12 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.btn-primary, .btn-primary:hover {
+  color: #000;
+  background-color: #79bfa1;
+  border-color: #79bfa1;
+}
+
 img.bg-home {
   position: absolute;
   max-width: 40%;

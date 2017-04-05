@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<html>
+<head>
+  <title>Word of Mouth</title>
+</head>
+<body>
+
+<div class="container">
+  <section class="top-row row">
+    <div class="col-xs-12">
+      <img class="logo pull-left" src="img/logo-white.png">
+      <a class="pull-right" href="javascript:history.back()"><img class="back-arrow" src="img/back-arrow.png"></a>
+    </div>
+  </section>
+
+  <section class="choices row">
+    <div class="choice col-xs-6 col-sm-4 col-lg-2"><a class="btn-choice" id="painter" href="job-details-af.html"><img src="img/painter.png"></div></a>
+    <div class="choice col-xs-6 col-sm-4 col-lg-2"><a class="btn-choice" id="plumber" href="job-details-af.html"><img src="img/plumber.png"></div></a>
+    <div class="choice col-xs-6 col-sm-4 col-lg-2"><a class="btn-choice" id="tiler" href="job-details-af.html"><img src="img/tiler.png"></div></a>
+    <div class="choice col-xs-6 col-sm-4 col-lg-2"><a class="btn-choice" id="locksmith" href="job-details-af.html"><img src="img/locksmith.png"></div></a>
+    <div class="choice col-xs-6 col-sm-4 col-lg-2"><a class="btn-choice" id="carpenter" href="job-details-af.html"><img src="img/carpenter.png"></div></a>
+    <div class="choice col-xs-6 col-sm-4 col-lg-2"><a class="btn-choice" id="electrician" href="job-details-af.html"><img src="img/electrician.png"></div></a>
+  </section>
+
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-96879478-1', 'auto');
+  ga('send', 'pageview', 'service-choice');
+
+  $(".btn-choice").on('click', function() {
+      ga('send', 'event', 'choice', $(this).attr("id"), '3');
+  });
+</script>
+
+</body>
+</html>

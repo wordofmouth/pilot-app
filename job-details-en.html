@@ -9,12 +9,14 @@
 
   <link rel="stylesheet" href="css/style.css">
 
+  <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+
 </head>
 
 
 <html>
 <head>
-  <title>Word of Mouth - Job details</title>
+  <title>Word of Mouth</title>
 </head>
 <body>
 
@@ -48,7 +50,11 @@
 
   <section class="size">
     <h2>How big is the job?</h2>
-
+    <div class="btn-group btn-group-justified" role="group">
+      <a id="small" class="btn btn-default btn-size">Small</a>
+      <a id="medium" class="btn btn-default btn-size">Medium</a>
+      <a id="large" class="btn btn-default btn-size">Large</a>
+    </div>
   </section>
 
   <a class="btn btn-default" href="select-provider.html"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> Continue</a>
@@ -62,8 +68,13 @@
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-96879478-1', 'auto');
-  ga('send', 'pageview');
-</script>
+  ga('send', 'pageview', 'job-details');
+
+  $(".btn-size").on('click', function() {
+    $(".btn-size").removeClass("btn-primary")
+    $(this).addClass("btn-primary")
+    ga('send', 'event', 'size', $(this).attr("id"), '3');
+  });</script>
 
 </body>
 </html>
