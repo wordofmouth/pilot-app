@@ -5,11 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
-  <script src="js/addtohomescreen.min.js"></script>
-
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
 
   <link rel="stylesheet" href="css/style.css">
 
@@ -23,32 +22,27 @@
 <body>
 
 <div class="container">
-
-  <section class="row oops-message">
-    <div class="col-xs-3"><img src="img/wall-left.png"></div>
-    <div class="col-xs-6">
-      <h2>Oops!</h2>
-      <h3>We're sorry!</h3>
-    </div>
-    <div class="col-xs-3"><img src="img/wall-right.png"></div>
-  </section>
-
-  <section class="row oops-details">
+  <section class="top-row row">
     <div class="col-xs-12">
-      <h4>The system is very busy and we are unable to complete your order.</h4>
-      <h4>We hope to have it resolved soon.</h4>
-      <h4><strong class="red-text">As a thank you</strong>, your phone number is now linked to a <strong class="red-text">25% discount off your next order</strong>.</h4>
+      <img class="logo pull-left" src="img/logo-white.png">
+      <a class="pull-right" href="javascript:history.back()"><img class="back-arrow" src="img/back-arrow.png"></a>
     </div>
   </section>
 
-  <section class="shortcut row">
-    <div class="col-xs-12">
-      <a onclick="addToHomescreen();"><img class="center-block" src="img/download.png"></a>
-      <h3 class="red-text">Save time</h3>
-      <a onclick="addToHomescreen();">Add the shortcut to your phone</a>
-    </div>
+  <section class="number-request">
+    <h3>Om jou diens te bevestig verskaf asseblief jou telefoon nommer:</h3>
+    <form class="form-inline">
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-addon"><i class="fa fa-fw fa-phone" aria-hidden="true"></i></div>
+          <input type="number" class="form-control" id="number">
+        </div>
+      </div>
+    </form>
   </section>
-    
+
+  <a class="btn btn-default btn-continue" href="sorry-af.html"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> Voortgaan</a>
+
 </div>
 
 <script>
@@ -58,7 +52,12 @@
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-96879478-1', 'auto');
-  ga('send', 'pageview');
+  ga('send', 'pageview', 'number-request');
+
+  $(".btn-continue").on('click', function() {
+    console.log($('#number').val())
+    ga('send', 'event', 'number', $('#number').val(), '6');
+  });
 </script>
 
 </body>
