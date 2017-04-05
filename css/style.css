@@ -36,7 +36,7 @@ img.bg-bottom {
   max-width: 40%;
   max-width: 150px;
   margin-top: 20vh;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 .opener {
@@ -45,7 +45,7 @@ img.bg-bottom {
 
 .home-menu img {
   max-width: 100%;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .top-row {
