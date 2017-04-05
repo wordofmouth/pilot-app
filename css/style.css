@@ -10,7 +10,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.btn-primary, .btn-primary:hover {
+.btn-primary, .btn-primary:hover, .btn-primary:active {
   color: #000;
   background-color: #79bfa1;
   border-color: #79bfa1;
@@ -87,6 +87,12 @@ img.bg-bottom {
 
 .provider .rating {
   color: #f39c12;
+}
+
+#number-request {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255,255,255,0.5);
 }
 
 .oops-message, .oops-details, .shortcut {
