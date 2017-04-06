@@ -51,13 +51,11 @@
   <section class="size">
     <h3>How big is the job?</h3>
     <div class="btn-group btn-group-justified" role="group">
-      <a id="small" class="btn btn-default btn-size">Small<br>(3 hours)</a>
-      <a id="medium" class="btn btn-default btn-size">Medium<br>(1 day)</a>
-      <a id="large" class="btn btn-default btn-size">Large<br>(2 days+)</a>
+      <a href="select-provider-small-en.html" id="small" class="btn btn-default btn-size">Small<br>(3 hours)</a>
+      <a href="select-provider-medium-en.html" id="medium" class="btn btn-default btn-size">Medium<br>(1 day)</a>
+      <a href="select-provider-large-en.html" id="large" class="btn btn-default btn-size">Large<br>(2 days+)</a>
     </div>
   </section>
-
-  <a class="btn btn-default btn-continue" href="select-provider-en.html"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> Continue</a>
 
 </div>
 
@@ -73,11 +71,7 @@
   $(".btn-size").on('click', function() {
     $(".btn-size").removeClass("btn-primary")
     $(this).addClass("btn-primary")
-    ga('send', 'event', 'size', $(this).attr("id"));
-  });
-
-  $(".btn-continue").on('click', function() {
-    ga('send', 'event', 'continue', $(this).attr("id"), '4');
+    ga('send', 'event', 'size', $(this).attr("id"), '4');
   });
 
   </script>

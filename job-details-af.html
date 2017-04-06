@@ -49,13 +49,11 @@
   <section class="size">
     <h3>Hoe groot is die taak?</h3>
     <div class="btn-group btn-group-justified" role="group">
-      <a id="small" class="btn btn-default btn-size">Klein<br>(2 ure)</a>
-      <a id="medium" class="btn btn-default btn-size">Medium<br>(1 dag)</a>
-      <a id="large" class="btn btn-default btn-size">Groot<br>(2 dae+)</a>
+      <a href="select-provider-small-af.html" id="small" class="btn btn-default btn-size">Klein<br>(2 ure)</a>
+      <a href="select-provider-medium-af.html" id="medium" class="btn btn-default btn-size">Medium<br>(1 dag)</a>
+      <a href="select-provider-large-af.html" id="large" class="btn btn-default btn-size">Groot<br>(2 dae+)</a>
     </div>
   </section>
-
-  <a class="btn btn-default btn-continue" href="select-provider-af.html"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> Voortgaan</a>
 
 </div>
 
@@ -71,11 +69,7 @@
   $(".btn-size").on('click', function() {
     $(".btn-size").removeClass("btn-primary")
     $(this).addClass("btn-primary")
-    ga('send', 'event', 'size', $(this).attr("id"));
-  });
-
-  $(".btn-continue").on('click', function() {
-    ga('send', 'event', 'continue', $(this).attr("id"), '4');
+    ga('send', 'event', 'size', $(this).attr("id"), '4');
   });
 
   </script>

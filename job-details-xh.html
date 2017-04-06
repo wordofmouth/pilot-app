@@ -49,13 +49,11 @@
   <section class="size">
     <h3>Mngakanani umsebenzi ofuna wenziwe?</h3>
     <div class="btn-group btn-group-justified" role="group">
-      <a id="small" class="btn btn-default btn-size">Mncini<br>(2 iiyure)</a>
-      <a id="medium" class="btn btn-default btn-size">Uphakathi<br>(1 usuku)</a>
-      <a id="large" class="btn btn-default btn-size">Mkhulu<br>(2 iintsuku+)</a>
+      <a href="select-provider-small-xh.html" id="small" class="btn btn-default btn-size">Mncini<br>(2 iiyure)</a>
+      <a href="select-provider-medium-xh.html" id="medium" class="btn btn-default btn-size">Uphakathi<br>(1 usuku)</a>
+      <a href="select-provider-large-xh.html" id="large" class="btn btn-default btn-size">Mkhulu<br>(2 iintsuku+)</a>
     </div>
   </section>
-
-  <a class="btn btn-default btn-continue" href="select-provider-xh.html"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> Qhubeka</a>
 
 </div>
 
@@ -71,11 +69,7 @@
   $(".btn-size").on('click', function() {
     $(".btn-size").removeClass("btn-primary")
     $(this).addClass("btn-primary")
-    ga('send', 'event', 'size', $(this).attr("id"));
-  });
-
-  $(".btn-continue").on('click', function() {
-    ga('send', 'event', 'continue', $(this).attr("id"), '4');
+    ga('send', 'event', 'size', $(this).attr("id"), '4');
   });
 
   </script>
