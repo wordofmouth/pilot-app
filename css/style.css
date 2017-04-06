@@ -65,6 +65,8 @@ img.bg-bottom {
 
 .choices img {
   padding: 10px;
+  min-width: 100px;
+  min-height: 100px;
   max-height: calc(30vh - 40px);
   max-width: 100%;
 }
@@ -110,7 +112,11 @@ img.bg-bottom {
 }
 
 .oops-message img {
-  width: 100%;
+  width: 120%;
+}
+
+.wall-right {
+  margin-left: -20%;
 }
 
 .shortcut img {
