@@ -64,8 +64,9 @@ img.bg-bottom {
 }
 
 .choices img {
-  width: 100%;
   padding: 10px;
+  max-height: calc(30vh - 40px);
+  max-width: 100%;
 }
 
 .choice {
